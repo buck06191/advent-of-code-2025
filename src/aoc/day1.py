@@ -3,7 +3,7 @@ from typing import Callable
 from dataclasses import dataclass
 import operator
 
-from aoc.shared.parse_file import load_file
+from aoc.shared.parse_file import load_file_by_lines
 
 DIAL_SIZE = 100
 
@@ -74,7 +74,7 @@ def turn_dial(
 def run_day1():
     print("🎄 Running Day 1\n")
     input_file = Path(__file__).parent.parent.parent / "data" / "day1.txt"
-    instructions = load_file(input_file)
+    instructions = load_file_by_lines(input_file)
     print("1️⃣ Running Part 1")
     turn_dial(50, instructions, part=1)
     print("2️⃣ Running Part 2")
